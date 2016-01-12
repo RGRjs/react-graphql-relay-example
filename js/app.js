@@ -12,7 +12,7 @@ class HomeRoute extends Relay.Route {
         store { ${Component.getFragment('store') } }
       }
     `
-  }
+  };
 }
 
 ReactDOM.render(

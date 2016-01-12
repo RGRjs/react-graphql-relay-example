@@ -7,21 +7,25 @@ class Link extends React.Component {
     color: '#888',
     fontSize: '0.7em',
     marginRight: '0.5em'
-  })
+  });
+
   urlStyle = () => ({
     color: '#062',
     fontSize: '0.85em'
-  })
+  });
+
   dateLabel = () => {
     let {link, relay} = this.props;
     if (relay.hasOptimisticUpdate(link)) {
       return 'Saving...';
     }
     return moment(link.createdAt).format('L')
-  }
+  };
+
   url = () => {
     return this.props.link.url.replace(/^https?:\/\/|\/$/ig,'');
-  }
+  };
+
   render() {
     let {link} = this.props;
     return (
@@ -55,4 +59,3 @@ Link = Relay.createContainer(Link, {
 });
 
 export default Link;
-

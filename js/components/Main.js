@@ -10,14 +10,17 @@ class Main extends React.Component {
     super(props);
     this.search = debounce(this.search, 300);
   }
+
   search = (e) => {
     let query = e.target.value;
     this.props.relay.setVariables({ query });
-  }
+  };
+
   setLimit = (e) => {
     let newLimit = Number(e.target.value);
     this.props.relay.setVariables({limit: newLimit});
-  }
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     let onSuccess = () => {
@@ -27,7 +30,7 @@ class Main extends React.Component {
       var error = transaction.getError() || new Error('Mutation failed.');
       console.error(error);
     };
-    Relay.Store.update(
+    Relay.Store.commitUpdate(
       new CreateLinkMutation({
         title: this.refs.newTitle.value,
         url: this.refs.newUrl.value,
@@ -37,10 +40,12 @@ class Main extends React.Component {
     );
     this.refs.newTitle.value = "";
     this.refs.newUrl.value = "";
-  }
+  };
+
   componentDidMount() {
     $('.modal-trigger').leanModal();
   }
+
   render() {
     let content = this.props.store.linkConnection.edges.map(edge => {
       return <Link key={edge.node.id} link={edge.node} />;
