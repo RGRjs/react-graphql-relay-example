@@ -8,17 +8,15 @@ import CreateLinkMutation from "../mutations/CreateLinkMutation";
 class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.search = debounce(this.search, 300);
+    this.setVariables = debounce(this.props.relay.setVariables, 300);
   }
 
   search = (e) => {
-    let query = e.target.value;
-    this.props.relay.setVariables({ query });
+    this.setVariables({ query: e.target.value });
   };
 
   setLimit = (e) => {
-    let newLimit = Number(e.target.value);
-    this.props.relay.setVariables({limit: newLimit});
+    this.setVariables({ limit: Number(e.target.value) });
   };
 
   handleSubmit = (e) => {
