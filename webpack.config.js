@@ -1,7 +1,9 @@
+const path = require('path');
+
 module.exports = {
   entry: "./js/app.js",
   output: {
-    path: __dirname + "/public",
+    path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
   },
   module: {
@@ -9,7 +11,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['./babelRelayPlugin']
+          plugins: [path.resolve(__dirname, 'babelRelayPlugin')]
         }
       }
     ]
