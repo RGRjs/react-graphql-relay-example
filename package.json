@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rgrjs/rgrjs.com.git"
+    "url": "git+https://github.com/rgrjs/react-graphql-relay-example.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rgrjs/rgrjs.com/issues"
+    "url": "https://github.com/rgrjs/react-graphql-relay-example/issues"
   },
-  "homepage": "https://github.com/rgrjs/rgrjs.com#readme",
+  "homepage": "https://github.com/rgrjs/react-graphql-relay-example#readme",
   "dependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.5.1",

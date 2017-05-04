@@ -66,7 +66,7 @@ class Main extends React.Component {
         <div className="row">
           <div className="col m9 s12">
             <div className="flow-text">
-              <a stlye="" target="_blank" href="https://twitter.com/RGRjs">@RGRjs</a>
+              <a stlye="" target="_blank" href="https://twitter.com/jsComplete">@jsComplete</a>
             </div>
           </div>
           <div className="col m3 hide-on-small-only">
