@@ -1,0 +1,13 @@
+{
+  "name": "rgrjs",
+  "description": "A collection of educational resources about React, GraphQL, and Relay",
+  "keywords": [
+    "React",
+    "GraphQL",
+    "Relay"
+  ],
+  "repository": "https://github.com/rgrjs/react-graphql-relay-example/",
+  "addons": [
+    "mongolab:sandbox"
+  ]
+}
